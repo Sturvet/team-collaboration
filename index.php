@@ -293,14 +293,8 @@
             </div>
         </div>
     </section>
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p>&copy; 2026 J's Crest Hotel. All rights reserved.</p>
-        </div>
-    </footer>
-
     <script src="script.js"></script>
 </body>
+
 
 </html>
