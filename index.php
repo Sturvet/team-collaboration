@@ -59,7 +59,7 @@
 
             <div class="side-menu-content">
                 <h2>About J's Crest Hotel</h2>
-                <p>At J's Crest Hotel, we blend modern comfort with warm hospitality to create a memorable stay. Enjoy elegant rooms, premium amenities, and friendly service designed for every traveler. Our hotel offers a perfect blend of luxury and relaxation, with stunning views and top-notch facilities to make your visit unforgettable.</p>
+                <p>At J's Crest Hotel, we blend modern comfort with warm hospitality to create a memorable stay. Enjoy elegant rooms, premium amenities, and friendly service designed for every tra[...]
 
                 <h3>Our Mission</h3>
                 <p>To provide exceptional hospitality experiences that exceed guest expectations through elegant accommodations, personalized service, and world-class amenities.</p>
@@ -137,8 +137,8 @@
                     <div class="promo-details" id="luxury-details">
                         <button class="close-promo" onclick="closePromo('luxury')">×</button>
                         <h3>About Our Luxury Suite Package</h3>
-                        <p>Experience the pinnacle of luxury at J's Crest Hotel with our exclusive Luxury Suite package. Designed for discerning travelers who demand the very best, this package offers unparalleled comfort and sophistication.</p>
-                        <p>Our luxury suites feature premium amenities, breathtaking views, and personalized service that exceeds expectations. Whether you're celebrating a special occasion or simply treating yourself to the finest accommodations, our Luxury Suite package provides an unforgettable experience of elegance and refinement.</p>
+                        <p>Experience the pinnacle of luxury at J's Crest Hotel with our exclusive Luxury Suite package. Designed for discerning travelers who demand the very best, this package o[...]
+                        <p>Our luxury suites feature premium amenities, breathtaking views, and personalized service that exceeds expectations. Whether you're celebrating a special occasion or si[...]
                     </div>
                 </div>
 
@@ -165,8 +165,8 @@
                     <div class="promo-details" id="romantic-details">
                         <button class="close-promo" onclick="closePromo('romantic')">×</button>
                         <h3>About Our Romantic Getaway Package</h3>
-                        <p>Create unforgettable memories with your loved one at J's Crest Hotel's Romantic Getaway package. This specially curated experience is designed to rekindle romance and create magical moments that will be cherished forever.</p>
-                        <p>From candlelit dinners and couples massages to champagne toasts and breakfast in bed, every detail is crafted to celebrate your love. Our romantic packages transform ordinary getaways into extraordinary experiences filled with passion, intimacy, and lasting memories.</p>
+                        <p>Create unforgettable memories with your loved one at J's Crest Hotel's Romantic Getaway package. This specially curated experience is designed to rekindle romance and c[...]
+                        <p>From candlelit dinners and couples massages to champagne toasts and breakfast in bed, every detail is crafted to celebrate your love. Our romantic packages transform or[...]
                     </div>
                 </div>
 
@@ -193,8 +193,8 @@
                     <div class="promo-details" id="family-details">
                         <button class="close-promo" onclick="closePromo('family')">×</button>
                         <h3>About Our Family Fun Package</h3>
-                        <p>Make family time unforgettable with J's Crest Hotel's Family Fun Package. Designed specifically for families seeking quality time together, this package combines comfort, entertainment, and memorable experiences for every family member.</p>
-                        <p>From connecting family rooms and kids' entertainment centers to family dining experiences and complimentary activities, we ensure that every moment is filled with joy and togetherness. Create lasting family memories in an environment that caters to both parents and children alike.</p>
+                        <p>Make family time unforgettable with J's Crest Hotel's Family Fun Package. Designed specifically for families seeking quality time together, this package combines comfor[...]
+                        <p>From connecting family rooms and kids' entertainment centers to family dining experiences and complimentary activities, we ensure that every moment is filled with joy a[...]
                     </div>
                 </div>
             </div>
@@ -216,72 +216,72 @@
                         <div class="room-card">
                             <div class="room-image" style="background-image: url('media/standard-1.jpg');"></div>
                             <div class="room-amenities">
-                                <span class="amenity" title="King Bed">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="amenity" title="Climate Control">❄️</span>
+                                <span class="amenity" title="King Bed">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="a[...]
                             </div>
-                            <div class="room-details"><h4>Deluxe Room</h4><div class="room-price">$149/night</div><p class="room-description">Spacious and elegant with premium furnishings and modern amenities.</p><button class="room-button">Book Now</button></div>
+                            <div class="room-details"><h4>Deluxe Room</h4><div class="room-price">$149/night</div><p class="room-description">Spacious and elegant with premium furnishings and mod[...]
                         </div>
                         <div class="room-card">
                             <div class="room-image" style="background-image: url('media/bg-1.jpg');"></div>
                             <div class="room-amenities">
-                                <span class="amenity" title="Queen Bed">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="TV">📺</span><span class="amenity" title="Climate Control">❄️</span>
+                                <span class="amenity" title="Queen Bed">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="TV">📺</span><span class="amenit[...]
                             </div>
-                            <div class="room-details"><h4>Superior Room</h4><div class="room-price">$129/night</div><p class="room-description">Well-appointed rooms with all essential amenities for your comfort.</p><button class="room-button">Book Now</button></div>
+                            <div class="room-details"><h4>Superior Room</h4><div class="room-price">$129/night</div><p class="room-description">Well-appointed rooms with all essential amenities f[...]
                         </div>
                         <div class="room-card">
                             <div class="room-image" style="background-image: url('media/bg-2.jpg');"></div>
                             <div class="room-amenities">
-                                <span class="amenity" title="King Bed">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="amenity" title="Climate Control">❄️</span>
+                                <span class="amenity" title="King Bed">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="a[...]
                             </div>
-                            <div class="room-details"><h4>Premier Room</h4><div class="room-price">$169/night</div><p class="room-description">Enhanced comfort with upscale decor and premium bedding.</p><button class="room-button">Book Now</button></div>
+                            <div class="room-details"><h4>Premier Room</h4><div class="room-price">$169/night</div><p class="room-description">Enhanced comfort with upscale decor and premium bedd[...]
                         </div>
                         <div class="room-card">
                             <div class="room-image" style="background-image: url('media/bg-3.jpg');"></div>
                             <div class="room-amenities">
-                                <span class="amenity" title="King Bed">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="amenity" title="Lounge Access">🍷</span>
+                                <span class="amenity" title="King Bed">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="a[...]
                             </div>
-                            <div class="room-details"><h4>Club King</h4><div class="room-price">$249/night</div><p class="room-description">Exclusive king room with lounge access and complimentary breakfast.</p><button class="room-button">Book Now</button></div>
+                            <div class="room-details"><h4>Club King</h4><div class="room-price">$249/night</div><p class="room-description">Exclusive king room with lounge access and complimentar[...]
                         </div>
                         <div class="room-card">
                             <div class="room-image" style="background-image: url('media/bg-4.jpg');"></div>
                             <div class="room-amenities">
-                                <span class="amenity" title="Twin Beds">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="amenity" title="Business Services">💼</span>
+                                <span class="amenity" title="Twin Beds">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="[...]
                             </div>
-                            <div class="room-details"><h4>Club Twin</h4><div class="room-price">$239/night</div><p class="room-description">Twin beds with executive lounge privileges and business services.</p><button class="room-button">Book Now</button></div>
+                            <div class="room-details"><h4>Club Twin</h4><div class="room-price">$239/night</div><p class="room-description">Twin beds with executive lounge privileges and business[...]
                         </div>
                         <div class="room-card">
                             <div class="room-image" style="background-image: url('media/hotel-1.jpg');"></div>
                             <div class="room-amenities">
-                                <span class="amenity" title="King Bed">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="amenity" title="Concierge">📞</span>
+                                <span class="amenity" title="King Bed">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="a[...]
                             </div>
-                            <div class="room-details"><h4>Club Regency</h4><div class="room-price">$259/night</div><p class="room-description">Premium club room with full concierge and priority services.</p><button class="room-button">Book Now</button></div>
+                            <div class="room-details"><h4>Club Regency</h4><div class="room-price">$259/night</div><p class="room-description">Premium club room with full concierge and priority s[...]
                         </div>
                         <div class="room-card">
                             <div class="room-image" style="background-image: url('media/bg-1.jpg');"></div>
                             <div class="room-amenities">
-                                <span class="amenity" title="King Bed">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="amenity" title="Workspace">💼</span>
+                                <span class="amenity" title="King Bed">🛏️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="a[...]
                             </div>
-                            <div class="room-details"><h4>Executive Room</h4><div class="room-price">$279/night</div><p class="room-description">Superior executive accommodations with workspace and premium amenities.</p><button class="room-button">Book Now</button></div>
+                            <div class="room-details"><h4>Executive Room</h4><div class="room-price">$279/night</div><p class="room-description">Superior executive accommodations with workspace a[...]
                         </div>
                         <div class="room-card">
                             <div class="room-image" style="background-image: url('media/bg-2.jpg');"></div>
                             <div class="room-amenities">
-                                <span class="amenity" title="Living Area">🛋️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="amenity" title="Luxury Amenities">💎</span>
+                                <span class="amenity" title="Living Area">🛋️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class[...]
                             </div>
-                            <div class="room-details"><h4>Junior Suite</h4><div class="room-price">$349/night</div><p class="room-description">Spacious suite with separate living area and upscale comforts.</p><button class="room-button">Book Now</button></div>
+                            <div class="room-details"><h4>Junior Suite</h4><div class="room-price">$349/night</div><p class="room-description">Spacious suite with separate living area and upscale[...]
                         </div>
                         <div class="room-card">
                             <div class="room-image" style="background-image: url('media/bg-3.jpg');"></div>
                             <div class="room-amenities">
-                                <span class="amenity" title="Dining Area">🍽️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="amenity" title="Lounge Access">🍷</span>
+                                <span class="amenity" title="Dining Area">🍽️</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class[...]
                             </div>
-                            <div class="room-details"><h4>One-Bedroom Suite</h4><div class="room-price">$549/night</div><p class="room-description">Elegant suite with separate bedroom, lounge, and dining space.</p><button class="room-button">Book Now</button></div>
+                            <div class="room-details"><h4>One-Bedroom Suite</h4><div class="room-price">$549/night</div><p class="room-description">Elegant suite with separate bedroom, lounge, an[...]
                         </div>
                         <div class="room-card">
                             <div class="room-image" style="background-image: url('media/bg-4.jpg');"></div>
                             <div class="room-amenities">
-                                <span class="amenity" title="Multiple Rooms">🏰</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class="amenity" title="Concierge">🎩</span>
+                                <span class="amenity" title="Multiple Rooms">🏰</span><span class="amenity" title="WiFi">📶</span><span class="amenity" title="Smart TV">📺</span><span class[...]
                             </div>
-                            <div class="room-details"><h4>Presidential Suite</h4><div class="room-price">$999/night</div><p class="room-description">Ultimate luxury with expansive space and exclusive services.</p><button class="room-button">Book Now</button></div>
+                            <div class="room-details"><h4>Presidential Suite</h4><div class="room-price">$999/night</div><p class="room-description">Ultimate luxury with expansive space and exclu[...]
                         </div>
                     </div>
                 </div>
@@ -293,8 +293,14 @@
             </div>
         </div>
     </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 J's Crest Hotel. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
-
 
 </html>
