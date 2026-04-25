@@ -10,44 +10,61 @@ document.addEventListener('DOMContentLoaded', function() {
     const brandLogo = document.querySelector('.brand-logo');
 
     function setSideMenuState(isOpen) {
-        sideMenu.classList.toggle('open', isOpen);
-        menuOverlay.classList.toggle('visible', isOpen);
-        sideMenu.setAttribute('aria-hidden', String(!isOpen));
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        if (sideMenu && menuOverlay && menuToggle) {
+            sideMenu.classList.toggle('open', isOpen);
+            menuOverlay.classList.toggle('visible', isOpen);
+            sideMenu.setAttribute('aria-hidden', String(!isOpen));
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        }
     }
 
     function toggleDropdown(dropdown, isOpen) {
-        dropdown.classList.toggle('open', isOpen);
+        if (dropdown) {
+            dropdown.classList.toggle('open', isOpen);
+        }
     }
 
-    menuToggle.addEventListener('click', function() {
-        setSideMenuState(!sideMenu.classList.contains('open'));
-    });
+    if (menuToggle && sideMenu && menuOverlay) {
+        menuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            setSideMenuState(!sideMenu.classList.contains('open'));
+        });
+    }
 
-    menuClose.addEventListener('click', function() {
-        setSideMenuState(false);
-    });
-
-    menuOverlay.addEventListener('click', function() {
-        setSideMenuState(false);
-    });
-
-    document.addEventListener('click', function(event) {
-        if (
-            sideMenu.classList.contains('open') &&
-            !sideMenu.contains(event.target) &&
-            event.target !== menuToggle
-        ) {
+    if (menuClose && sideMenu) {
+        menuClose.addEventListener('click', function() {
             setSideMenuState(false);
-        }
-    });
+        });
+    }
+
+    if (menuOverlay && sideMenu) {
+        menuOverlay.addEventListener('click', function() {
+            setSideMenuState(false);
+        });
+    }
+
+    if (sideMenu && menuToggle) {
+        document.addEventListener('click', function(event) {
+            if (
+                sideMenu.classList.contains('open') &&
+                !sideMenu.contains(event.target) &&
+                event.target !== menuToggle &&
+                !menuToggle.contains(event.target)
+            ) {
+                setSideMenuState(false);
+            }
+        });
+    }
 
     // Desktop dropdown
-    accommodationDropdown.addEventListener('click', function(e) {
-        e.preventDefault();
-        const isOpen = accommodationDropdown.parentElement.classList.contains('open');
-        toggleDropdown(accommodationDropdown.parentElement, !isOpen);
-    });
+    if (accommodationDropdown) {
+        accommodationDropdown.addEventListener('click', function(e) {
+            e.preventDefault();
+            const isOpen = accommodationDropdown.parentElement.classList.contains('open');
+            toggleDropdown(accommodationDropdown.parentElement, !isOpen);
+        });
+    }
 
     // Mobile dropdown
     if (sideAccommodationToggle && sideAccommodationMenu) {
@@ -67,10 +84,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Navbar background change when leaving homepage
+    // Navbar background change when scrolling
     function updateHeaderStyle() {
+        if (!header) return;
+        
         const homepageFirst = document.querySelector('.homepage-first');
-        // Inner pages (no hero): use solid header immediately so nav/book contrast matches the light layout
         const triggerPoint = homepageFirst ? homepageFirst.offsetHeight : 0;
 
         const isScrolled = window.scrollY > triggerPoint - 50;
@@ -88,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     window.addEventListener('scroll', updateHeaderStyle);
-    // Call once on load to set initial state
     updateHeaderStyle();
 
     // Promotion cards click functionality
@@ -98,23 +115,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const details = card.querySelector('.promo-details');
         
         card.addEventListener('click', function(event) {
-            // Don't trigger if clicking on close button
             if (event.target.closest('.close-promo')) {
                 return;
             }
-            // Let Book Now / other links navigate
             if (event.target.closest('a[href]')) {
                 return;
             }
 
-            // Close all other promo details
             promoCards.forEach(otherCard => {
                 if (otherCard !== card) {
                     otherCard.querySelector('.promo-details').classList.remove('active');
                 }
             });
             
-            // Toggle current promo details
             details.classList.toggle('active');
         });
     });
@@ -135,33 +148,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-
-    // Hero slideshow - handled by CSS animation
-
 });
 
-// Rooms page animation
-document.addEventListener('DOMContentLoaded', function() {
-    // Fade-up animation on scroll with stagger
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const delay = entry.target.getAttribute('data-delay') || 0;
-                setTimeout(() => {
-                    entry.target.classList.add('fade-in');
-                }, delay);
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    document.querySelectorAll('.room-card').forEach(card => {
-        observer.observe(card);
-    });
-});
-
-// Guest rooms slider (3 visible, one-by-one slide)
+// FIXED: Guest rooms carousel
 document.addEventListener('DOMContentLoaded', function() {
     const roomsWrapper = document.getElementById('roomsAutoWrapper');
     const roomsTrack = document.getElementById('roomsAutoTrack');
@@ -170,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!roomsWrapper || !roomsTrack || !prevBtn || !nextBtn) return;
 
-    const sourceCards = Array.from(roomsTrack.children).map((card) => card.cloneNode(true));
+    const sourceCards = Array.from(roomsTrack.querySelectorAll('.room-card')).map((card) => card.cloneNode(true));
     let currentIndex = 0;
     let autoSlideTimer = null;
     let isPaused = false;
@@ -180,13 +169,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let clonesPerSide = 0;
 
     function visibleCount() {
-        if (window.innerWidth <= 480) return 1;
-        if (window.innerWidth <= 768) return 2;
+        const width = window.innerWidth;
+        if (width <= 480) return 1;
+        if (width <= 768) return 2;
         return 3;
     }
 
     function cardStep() {
-        const renderedCards = roomsTrack.children;
+        const renderedCards = roomsTrack.querySelectorAll('.room-card');
         if (renderedCards.length < 2) return 0;
         const firstCard = renderedCards[0];
         const secondCard = renderedCards[1];
@@ -326,9 +316,13 @@ document.addEventListener('DOMContentLoaded', function() {
         normalizeLoopPosition();
     });
 
+    let resizeTimer;
     window.addEventListener('resize', function() {
-        rebuildInfiniteTrack();
-        updateSlider(false);
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            rebuildInfiniteTrack();
+            updateSlider(false);
+        }, 250);
     });
 
     rebuildInfiniteTrack();
@@ -339,41 +333,3 @@ document.addEventListener('DOMContentLoaded', function() {
         stopAutoSlide();
     });
 });
-
-// Carousel Analytics Tracking System
-window.carouselAnalytics = {
-    events: [],
-    startTime: Date.now(),
-    
-    trackEvent: function(eventName, eventData = {}) {
-        const event = {
-            name: eventName,
-            timestamp: Date.now(),
-            data: eventData
-        };
-        this.events.push(event);
-        console.log('Carousel Event:', event);
-    },
-    
-    getSessionDuration: function() {
-        return Date.now() - this.startTime;
-    },
-    
-    getEventCount: function(eventName) {
-        return this.events.filter(e => e.name === eventName).length;
-    },
-    
-    getAnalyticsSummary: function() {
-        return {
-            totalEvents: this.events.length,
-            sessionDuration: this.getSessionDuration(),
-            events: {
-                autoSlides: this.getEventCount('carousel_auto_slide'),
-                manualNavigations: this.getEventCount('carousel_manual_nav'),
-                categoryClicks: this.getEventCount('carousel_category_click'),
-                dragInteractions: this.getEventCount('carousel_drag_start'),
-                touchInteractions: this.getEventCount('carousel_touch_swipe')
-            }
-        };
-    }
-};
